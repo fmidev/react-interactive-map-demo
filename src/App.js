@@ -40,7 +40,6 @@ function App() {
           )
             .then(response => response.json())
             .then(data => {
-              console.log("Fetched data for region:", region, data)
               return { region, data: data }
             })
         })
@@ -53,7 +52,6 @@ function App() {
         }, {})
 
         setWeatherData(regionWeather)
-        console.log("Weather data after fetching:", regionWeather) // Log weather data after setting state
       } catch (error) {
         console.error("Error fetching weather data:", error)
       }
@@ -68,10 +66,6 @@ function App() {
       setSelectedRegion(null) // Close popup
       return
     }
-  
-    console.log(`Clicked region: ${region}`)
-    console.log("Weather data for region:", weatherData[region.toLowerCase()])
-  
     if (e && e.clientX && e.clientY) {
       setMousePosition({ x: e.clientX, y: e.clientY })
       setSelectedRegion(region.toLowerCase()) // Ensure lowercase for matching

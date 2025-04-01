@@ -10,9 +10,9 @@ Make sure you have the following installed on your system:
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
-1. Navigate into the project directory:
+1. Clone the repo and navigate into the project directory:
    ```sh
-   cd react-example
+   cd react-interactive-map-demo
    ```
 2. Install dependencies:
    ```sh
@@ -54,5 +54,3 @@ This will start the application on `http://localhost:3000/`.
 ### Adjusting Map Path Rendering
 If the map does not render correctly, check the return statement in `Map.js`. You may need to adjust the `path` to correctly display your new SVG regions.
 
-## Conclusion
-After making these modifications, the application should work with your customized map, region data, and SmartMet server integration. Happy coding!
