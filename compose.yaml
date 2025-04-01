@@ -1,0 +1,32 @@
+# This is a Docker Compose configuration file.
+# It defines and runs multi-container Docker applications.
+# Start using:
+#   docker compose up
+
+services:
+  # This defines a service named 'web'
+  web:
+    # Build the Docker image from the current directory (look for a Dockerfile here)
+    build: .
+
+    # Maps port 3000 on your host machine to port 3000 in the container
+    ports:
+      - "3000:3000"
+
+    # Mounts the current directory into the container at /app (for live code updates)
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
+
+    # Sets the environment variable NODE_ENV to 'development'
+    environment:
+      NODE_ENV: development
+
+    # Keeps the standard input open (useful for interactive processes)
+    stdin_open: true
+
+    # Allocates a pseudo-TTY (helps with terminal input/output)
+    tty: true
+
+    # Overrides the default command and runs 'npm start' to start the app
+    command: npm start
