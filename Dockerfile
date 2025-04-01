@@ -10,7 +10,7 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
  
-# Copy the rest of your application files
+# Copy the rest of your application files (excluding the files defined in .dockerignore)
 COPY . .
  
 # Expose the port your app runs on
