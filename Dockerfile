@@ -1,3 +1,5 @@
+# See https://www.docker.com/blog/how-to-dockerize-react-app/ for explanation
+
 # Use the latest LTS version of Node.js
 FROM node:22-slim
  
